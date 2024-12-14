@@ -1,0 +1,77 @@
+# NAME
+#   listener.ora
+# FUNCTION
+#   Network Listener startup parameter file example
+
+# <lsnr>
+
+# LISTENER =
+#  (ADDRESS_LIST=
+#	(ADDRESS=(PROTOCOL=tcp)(HOST=localhost)(PORT=1521))
+#	(ADDRESS=(PROTOCOL=ipc)(KEY=PNPKEY)))	
+
+# SID_LIST_<lsnr>
+
+# SID_LIST_LISTENER=
+#   (SID_LIST=
+#	(SID_DESC=
+#			#BEQUEATH CONFIG
+#          (GLOBAL_DBNAME=salesdb.mycompany)
+#          (SID_NAME=sid1)			
+#          (ORACLE_HOME=/private/app/oracle/product/8.0.3)
+#			#PRESPAWN CONFIG
+#         (PRESPAWN_MAX=20)
+#	  (PRESPAWN_LIST=
+#           (PRESPAWN_DESC=(PROTOCOL=tcp)(POOL_SIZE=2)(TIMEOUT=1))
+#         )
+#        )
+#       )
+	
+# PASSWORDS_<lsnr>
+#
+# Default: NONE
+#
+# PASSWORDS_LISTENER = 20A22647832FB454      # "foobar"
+
+# SAVE_CONFIG_ON_STOP_<lsnr>
+# Default: OFF
+# Values: ON/OFF
+#
+# SAVE_CONFIG_ON_STOP_LISTENER = ON
+
+# USE_PLUG_AND_PLAY_<lsnr>
+# Values: ON/OFF
+# Default: OFF
+#
+# USE_PLUG_AND_PLAY_LISTENER = ON
+
+# LOG_FILE_<lsnr>
+# Default=<lsnr>
+#
+# LOG_FILE_LISTENER = lsnr
+
+# LOG_DIRECTORY_<lsnr>
+# Default: <oracle_home>/network/log
+#
+# LOG_DIRECTORY_LISTENER = /private/app/oracle/product/8.0.3/network/log
+
+# TRACE_LEVEL_<lsnr>
+# Default: OFF
+# Values: OFF/USER/ADMIN/SUPPORT/0-16
+#
+# TRACE_LEVEL_LISTENER = SUPPORT
+
+# TRACE_FILE_<lsnr>
+# Default: <lsnr>
+#
+# TRACE_FILE_LISTENER = lsnr
+
+# TRACE_DIRECTORY_<lsnr>
+# Default: <oracle_home>/network/trace
+#
+# TRACE_DIRECTORY_LISTENER=/private/app/oracle/product/8.0.3/network/trace
+# CONNECT_TIMEOUT_<lsnr>
+# Default: 10
+#
+# CONNECT_TIMEOUT_LISTENER=10
+
